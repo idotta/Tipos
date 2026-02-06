@@ -4,6 +4,7 @@
     <Project Path="src/Tipos/Tipos.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/Tipos.Benchmarks/Tipos.Benchmarks.csproj" />
     <Project Path="tests/Tipos.Generator.Tests/Tipos.Generator.Tests.csproj" />
     <Project Path="tests/Tipos.Tests/Tipos.Tests.csproj" />
   </Folder>
