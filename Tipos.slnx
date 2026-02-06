@@ -1,5 +1,9 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/Tipos.Generator/Tipos.Generator.csproj" />
     <Project Path="src/Tipos/Tipos.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Tipos.Generator.Tests/Tipos.Generator.Tests.csproj" />
   </Folder>
 </Solution>
