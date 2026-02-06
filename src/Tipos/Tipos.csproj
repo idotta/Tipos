@@ -3,7 +3,34 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>enable</Nullable>    
+    <AnalyzerTargetFramework>netstandard2.0</AnalyzerTargetFramework>
+
+     <!-- NuGet Package Metadata -->
+    <PackageId>Tipos</PackageId>
+    <Title>Tipos</Title>
+    <Version>0.1.0</Version>
+    <Authors>idotta</Authors>
+    <Description>A simple type library with source generators.</Description>
+    <PackageTags>valueof;value-of;source-generator;types</PackageTags>
+    <PackageProjectUrl>https://github.com/idotta/Tipos</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/idotta/Tipos</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tipos.Generator\Tipos.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Tipos.Generator\bin\$(Configuration)\$(AnalyzerTargetFramework)\Tipos.Generator.dll" Pack="true" PackagePath="analyzers/dotnet/cs" />
+  </ItemGroup>
 
 </Project>
